@@ -20,7 +20,7 @@ type RadioRxHeader struct {
 
 func TestCase1(t *testing.T) {
 	a := RadioRxHeader{1, 2, 3, 0x1234, 0x5678}
-	data, err := StructToBytes(a)
+	data, err := StructToBytes(&a)
 	fmt.Println(err, data)
 
 	var b RadioRxHeader

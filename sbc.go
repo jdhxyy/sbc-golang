@@ -9,7 +9,7 @@ import (
 	"encoding/binary"
 )
 
-// StructToBytes 结构体转字节流
+// StructToBytes 结构体转字节流.s是结构体指针
 func StructToBytes(s interface{}) ([]uint8, error) {
 	buf := new(bytes.Buffer)
 	err := binary.Write(buf, binary.LittleEndian, s)
